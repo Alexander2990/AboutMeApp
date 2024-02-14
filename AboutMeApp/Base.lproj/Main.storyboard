@@ -103,7 +103,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="eGh-nO-Y3Y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2N-MF-VYk">
@@ -114,7 +114,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHl-7Q-Mzi">
                                 <rect key="frame" x="139" y="662.66666666666663" width="115" height="47.333333333333371"/>
-                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                 </buttonConfiguration>
@@ -124,7 +124,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cf7-nu-thH"/>
-                        <color key="backgroundColor" red="0.96078431372549022" green="0.93333333333333335" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YHl-7Q-Mzi" firstAttribute="centerX" secondItem="YQF-Mr-O2v" secondAttribute="centerX" id="NWm-rh-HTR"/>
                             <constraint firstItem="Cf7-nu-thH" firstAttribute="bottom" secondItem="YHl-7Q-Mzi" secondAttribute="bottom" multiplier="1.2" id="XqS-Vf-VlF"/>
@@ -163,6 +163,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

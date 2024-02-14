@@ -7,11 +7,6 @@
 
 import UIKit
 
-struct User {
-    let user: String
-    let password: String
-}
-
 final class LoginViewController: UIViewController {
     
     // MARK: - IB Outlets
@@ -19,23 +14,13 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     // MARK: - Private Properties
-    private let userData = User(user: "Alexander", password: "1")
+    private let user = "Alexander"
+    private let password = "Password"
     
     // MARK: - Overrides Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let welcomeVC = segue.destination as? WelcomeViewController
-        welcomeVC?.userName = userNameTextField.text
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTextField.text == userData.user, passwordTextField.text == userData.password else {
-            showAlert(
-                withTitle: "Invalid login or password",
-                andMessage: "Please enter correct login and password"
-            )
-            return false
-        }
-        return true
+        welcomeVC?.userName = user
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -43,12 +28,23 @@ final class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard userNameTextField.text == user, passwordTextField.text == password else {
+            showAlert(
+                withTitle: "Invalid login or password",
+                andMessage: "Please enter correct login and password") {
+                    self.passwordTextField.text = ""
+                }
+            return false
+        }
+        return true
+    }
+    
     // MARK: - IB Actions
     @IBAction func showAuthorizationData(_ sender: UIButton) {
-        sender.tag == 0 ? showAlert(
-            withTitle: "Oops!",
-            andMessage: "Your User Name is Alexander 😉"
-        ) : showAlert(withTitle: "Oops!", andMessage: "Your password is 1 😉")
+        sender.tag == 0
+            ? showAlert( withTitle: "Oops!", andMessage: "Your User Name is \(user) 😉")
+            : showAlert(withTitle: "Oops!",andMessage: "Your password is \(password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -57,11 +53,10 @@ final class LoginViewController: UIViewController {
     }
     
     // MARK: - Private Methods
-    private func showAlert(withTitle title: String, andMessage message: String) {
+    private func showAlert(withTitle title: String, andMessage message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.userNameTextField.text = ""
-            self.passwordTextField.text = ""
+            completion?()
         }
         alert.addAction(okAction)
         present(alert, animated: true)
