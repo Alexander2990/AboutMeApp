@@ -56,10 +56,10 @@
                                                     </attributedString>
                                                 </state>
                                                 <connections>
-                                                    <action selector="forgotUserNameButtonDidPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJ8-Dm-loH"/>
+                                                    <action selector="showHintButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3JE-ux-IJh"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4e1-rm-We0">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4e1-rm-We0">
                                                 <rect key="frame" x="230" y="0.0" width="123" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
@@ -73,7 +73,7 @@
                                                     </attributedString>
                                                 </state>
                                                 <connections>
-                                                    <action selector="forgotPasswordDidPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="LoT-JH-odW"/>
+                                                    <action selector="showHintButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCL-PA-XB7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -134,7 +134,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="logOutButtonDidPressed" destination="a3X-Pu-Cdr" eventType="touchUpInside" id="mcd-FD-th5"/>
+                                    <segue destination="fDG-JI-MzD" kind="unwind" unwindAction="unwindToBack:" id="2tR-K4-QZl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -153,6 +153,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iV-D0-YCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fDG-JI-MzD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="880" y="-2"/>
         </scene>

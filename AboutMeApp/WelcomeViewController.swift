@@ -9,19 +9,15 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
     
-    @IBOutlet var greetingsLabel: UILabel!
+    // MARK: IB Outlets
+    @IBOutlet private var greetingsLabel: UILabel!
     
+    // MARK: - Properties
     var userName: String!
 
+    // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         greetingsLabel.text = "Welcome, \(userName ?? "")!"
     }
-    
-    @IBAction func logOutButtonDidPressed() {
-        dismiss(animated: true)
-    }
-    
-
 }
