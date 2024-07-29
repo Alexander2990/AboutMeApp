@@ -294,7 +294,7 @@
         <!--Name Bio-->
         <scene sceneID="YgW-JC-Si2">
             <objects>
-                <viewController id="OEK-Pk-Tla" sceneMemberID="viewController">
+                <viewController id="OEK-Pk-Tla" customClass="BiographyViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S1z-pr-1vw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,10 +320,10 @@
             </objects>
             <point key="canvasLocation" x="3062" y="855"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="E8a-65-0Ue">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gHN-rO-U5U" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gHN-rO-U5U" customClass="TabBarViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OrL-s5-YaA">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -364,7 +364,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="Фото" width="1024" height="1024"/>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

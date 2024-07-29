@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1113B6542C57FF4700E7D8B7 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1113B6532C57FF4700E7D8B7 /* AboutMeViewController.swift */; };
 		11820B892C53CD7700A65865 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11820B882C53CD7700A65865 /* WelcomeViewController.swift */; };
+		11C04A462C58139C00E156B6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C04A452C58139C00E156B6 /* TabBarViewController.swift */; };
+		11C04A482C581EDD00E156B6 /* UIViewController+GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C04A472C581EDD00E156B6 /* UIViewController+GradientBackground.swift */; };
+		11C04A4A2C581FD200E156B6 /* BiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C04A492C581FD200E156B6 /* BiographyViewController.swift */; };
 		11DED0392C53AA25008EB137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DED0382C53AA25008EB137 /* AppDelegate.swift */; };
 		11DED03B2C53AA25008EB137 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DED03A2C53AA25008EB137 /* SceneDelegate.swift */; };
 		11DED03D2C53AA25008EB137 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DED03C2C53AA25008EB137 /* LoginViewController.swift */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		1113B6532C57FF4700E7D8B7 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		11820B882C53CD7700A65865 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		11C04A452C58139C00E156B6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		11C04A472C581EDD00E156B6 /* UIViewController+GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+GradientBackground.swift"; sourceTree = "<group>"; };
+		11C04A492C581FD200E156B6 /* BiographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyViewController.swift; sourceTree = "<group>"; };
 		11DED0352C53AA25008EB137 /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11DED0382C53AA25008EB137 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11DED03A2C53AA25008EB137 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,9 @@
 				11DED03C2C53AA25008EB137 /* LoginViewController.swift */,
 				11820B882C53CD7700A65865 /* WelcomeViewController.swift */,
 				1113B6532C57FF4700E7D8B7 /* AboutMeViewController.swift */,
+				11C04A492C581FD200E156B6 /* BiographyViewController.swift */,
+				11C04A452C58139C00E156B6 /* TabBarViewController.swift */,
+				11C04A472C581EDD00E156B6 /* UIViewController+GradientBackground.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -70,6 +79,13 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		1113B6582C580ED600E7D8B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		11DED02C2C53AA25008EB137 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +105,7 @@
 		11DED0372C53AA25008EB137 /* AboutMeApp */ = {
 			isa = PBXGroup;
 			children = (
+				1113B6582C580ED600E7D8B7 /* Models */,
 				1113B6552C580E0900E7D8B7 /* ViewControllers */,
 				1113B6562C580E2000E7D8B7 /* Storyboards */,
 				11DED0412C53AA29008EB137 /* Assets.xcassets */,
@@ -169,9 +186,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				11DED03D2C53AA25008EB137 /* LoginViewController.swift in Sources */,
+				11C04A482C581EDD00E156B6 /* UIViewController+GradientBackground.swift in Sources */,
 				11820B892C53CD7700A65865 /* WelcomeViewController.swift in Sources */,
 				11DED0392C53AA25008EB137 /* AppDelegate.swift in Sources */,
+				11C04A4A2C581FD200E156B6 /* BiographyViewController.swift in Sources */,
 				1113B6542C57FF4700E7D8B7 /* AboutMeViewController.swift in Sources */,
+				11C04A462C58139C00E156B6 /* TabBarViewController.swift in Sources */,
 				11DED03B2C53AA25008EB137 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

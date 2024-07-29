@@ -14,5 +14,6 @@ final class AboutMeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         fotoImageView.layer.cornerRadius = fotoImageView.frame.width / 2
+        setupBackgroundColor()
     }
 }
