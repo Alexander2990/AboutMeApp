@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1113B6542C57FF4700E7D8B7 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1113B6532C57FF4700E7D8B7 /* AboutMeViewController.swift */; };
+		11206A2F2C58AC1D00DACE2C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11206A2E2C58AC1D00DACE2C /* User.swift */; };
 		11820B892C53CD7700A65865 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11820B882C53CD7700A65865 /* WelcomeViewController.swift */; };
 		11C04A462C58139C00E156B6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C04A452C58139C00E156B6 /* TabBarViewController.swift */; };
 		11C04A482C581EDD00E156B6 /* UIViewController+GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C04A472C581EDD00E156B6 /* UIViewController+GradientBackground.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		1113B6532C57FF4700E7D8B7 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		11206A2E2C58AC1D00DACE2C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		11820B882C53CD7700A65865 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		11C04A452C58139C00E156B6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		11C04A472C581EDD00E156B6 /* UIViewController+GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+GradientBackground.swift"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		1113B6582C580ED600E7D8B7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				11206A2E2C58AC1D00DACE2C /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				11820B892C53CD7700A65865 /* WelcomeViewController.swift in Sources */,
 				11DED0392C53AA25008EB137 /* AppDelegate.swift in Sources */,
 				11C04A4A2C581FD200E156B6 /* BiographyViewController.swift in Sources */,
+				11206A2F2C58AC1D00DACE2C /* User.swift in Sources */,
 				1113B6542C57FF4700E7D8B7 /* AboutMeViewController.swift in Sources */,
 				11C04A462C58139C00E156B6 /* TabBarViewController.swift in Sources */,
 				11DED03B2C53AA25008EB137 /* SceneDelegate.swift in Sources */,
