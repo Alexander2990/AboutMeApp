@@ -53,11 +53,10 @@
 			isa = PBXGroup;
 			children = (
 				11DED03C2C53AA25008EB137 /* LoginViewController.swift */,
+				11C04A452C58139C00E156B6 /* TabBarViewController.swift */,
 				11820B882C53CD7700A65865 /* WelcomeViewController.swift */,
 				1113B6532C57FF4700E7D8B7 /* AboutMeViewController.swift */,
 				11C04A492C581FD200E156B6 /* BiographyViewController.swift */,
-				11C04A452C58139C00E156B6 /* TabBarViewController.swift */,
-				11C04A472C581EDD00E156B6 /* UIViewController+GradientBackground.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -89,6 +88,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		11206A302C58E80B00DACE2C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				11C04A472C581EDD00E156B6 /* UIViewController+GradientBackground.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		11DED02C2C53AA25008EB137 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +117,7 @@
 			children = (
 				1113B6582C580ED600E7D8B7 /* Models */,
 				1113B6552C580E0900E7D8B7 /* ViewControllers */,
+				11206A302C58E80B00DACE2C /* Extension */,
 				1113B6562C580E2000E7D8B7 /* Storyboards */,
 				11DED0412C53AA29008EB137 /* Assets.xcassets */,
 				1113B6572C580E3300E7D8B7 /* App */,

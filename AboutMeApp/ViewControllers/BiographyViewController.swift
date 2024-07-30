@@ -7,11 +7,17 @@
 
 import UIKit
 
-class BiographyViewController: UIViewController {
+final class BiographyViewController: UIViewController {
 
+    @IBOutlet var biographyLabel: UILabel!
+    
+    var biography: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupBackgroundColor()
+        
+        biographyLabel.text = biography
     }
 }

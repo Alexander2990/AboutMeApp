@@ -20,7 +20,8 @@ final class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupBackgroundColor()
-        greetingsLabel.text = "Welcome, \(userName ?? "")! \n My name is "
+        
+        greetingsLabel.text = "Welcome, User! \n My name is \(userName ?? "")!"
     }
     
 }

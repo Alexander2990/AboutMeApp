@@ -14,13 +14,28 @@ final class LoginViewController: UIViewController {
     @IBOutlet private var passwordTF: UITextField!
     
     // MARK: - Private Properties
-    private let user = "Alexander"
-    private let password = "123"
+    private let user = User.getUser()
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let welcomeVC = segue.destination as? WelcomeViewController
-        welcomeVC?.userName = userNameTF.text
+        let tabBarController = segue.destination as? UITabBarController
+        tabBarController?.viewControllers?.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = userNameTF.text
+            } else if let navigationVC = viewController as? UINavigationController {
+                if let aboutMeVC = navigationVC.topViewController as? AboutMeViewController {
+                    aboutMeVC.name = user.person.name
+                    aboutMeVC.surname = user.person.surname
+                    aboutMeVC.company = user.person.company
+                    aboutMeVC.department = user.person.department
+                    aboutMeVC.jobTitle = user.person.jobTitle
+                    aboutMeVC.biography = user.person.biography
+                    aboutMeVC.photo = user.person.photo
+                    
+                    aboutMeVC.navigationItem.title = user.person.getFullName()
+                }
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -30,7 +45,7 @@ final class LoginViewController: UIViewController {
     
     // MARK: Validation
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTF.text == user, passwordTF.text == password else {
+        guard userNameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 withTitle: "Invalid login or password",
                 andMessage: """
@@ -46,14 +61,14 @@ final class LoginViewController: UIViewController {
     // MARK: - IB Actions
     @IBAction private func showHintButtonPressed(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(withTitle: "Oops!", andMessage: "Your name is \"Alexander\" 👀")
-            : showAlert(withTitle: "Oops!", andMessage: "Your password is \"123\" 🤫")
+        ? showAlert(withTitle: "Oops!", andMessage: "Your name is \"Alexander\" 👀")
+        : showAlert(withTitle: "Oops!", andMessage: "Your password is \"123\" 🤫")
         
     }
     
     @IBAction func unwindToBack(_ unwindSegue: UIStoryboardSegue) {
-        userNameTF.text = ""
-        passwordTF.text = ""
+        userNameTF.text = user.login
+        passwordTF.text = user.password
     }
     
     // MARK: - Private Methods
