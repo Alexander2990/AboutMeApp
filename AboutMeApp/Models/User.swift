@@ -8,7 +8,6 @@
 import Foundation
 
 struct User {
-    let id = UUID()
     let login: String
     let password: String
     let person: Person
@@ -63,5 +62,5 @@ enum JobTitle: String {
 
 enum Department: String {
     case trainingDivision = "Учебный отдел"
-    case carParc = "Водитель автобуса"
+    case carParc = "Автопарк"
 }

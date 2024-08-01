@@ -16,26 +16,20 @@ final class LoginViewController: UIViewController {
     // MARK: - Private Properties
     private let user = User.getUser()
     
+    // MARK: - View Life Cycles
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        userNameTF.text = user.login
+        passwordTF.text = user.password
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarController = segue.destination as? UITabBarController
-        tabBarController?.viewControllers?.forEach { viewController in
-            if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = userNameTF.text
-            } else if let navigationVC = viewController as? UINavigationController {
-                if let aboutMeVC = navigationVC.topViewController as? AboutMeViewController {
-                    aboutMeVC.name = user.person.name
-                    aboutMeVC.surname = user.person.surname
-                    aboutMeVC.company = user.person.company
-                    aboutMeVC.department = user.person.department
-                    aboutMeVC.jobTitle = user.person.jobTitle
-                    aboutMeVC.biography = user.person.biography
-                    aboutMeVC.photo = user.person.photo
-                    
-                    aboutMeVC.navigationItem.title = user.person.getFullName()
-                }
-            }
+        guard let tabBarController = segue.destination as? TabBarViewController else {
+            return
         }
+        tabBarController.user = user
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -61,14 +55,14 @@ final class LoginViewController: UIViewController {
     // MARK: - IB Actions
     @IBAction private func showHintButtonPressed(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(withTitle: "Oops!", andMessage: "Your name is \"Alexander\" 👀")
-        : showAlert(withTitle: "Oops!", andMessage: "Your password is \"123\" 🤫")
+        ? showAlert(withTitle: "Oops!", andMessage: "Your name is \(user.login) 👀")
+        : showAlert(withTitle: "Oops!", andMessage: "Your password is \(user.password) 🤫")
         
     }
     
     @IBAction func unwindToBack(_ unwindSegue: UIStoryboardSegue) {
-        userNameTF.text = user.login
-        passwordTF.text = user.password
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
     
     // MARK: - Private Methods

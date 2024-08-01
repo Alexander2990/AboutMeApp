@@ -10,7 +10,11 @@ import UIKit
 final class AboutMeViewController: UIViewController {
     
     // MARK: IB Outlets
-    @IBOutlet var fotoImageView: UIImageView!
+    @IBOutlet var fotoImageView: UIImageView! {
+        didSet {
+            fotoImageView.layer.cornerRadius = fotoImageView.frame.width / 2
+        }
+    }
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
     @IBOutlet var companyLabel: UILabel!
@@ -18,32 +22,27 @@ final class AboutMeViewController: UIViewController {
     @IBOutlet var jobTitleLabel: UILabel!
     
     // MARK: - Properties
-    var photo: String!
-    var name: String!
-    var surname: String!
-    var company: String!
-    var department: String!
-    var jobTitle: String!
-    var biography: String!
+    var user: User!
     
     // MARK: - View Life Cycles
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        fotoImageView.layer.cornerRadius = fotoImageView.frame.width / 2
+    override func viewDidLoad() {
+        super.viewDidLoad()
         setupBackgroundColor()
         
-        nameLabel.text = name
-        surnameLabel.text = surname
-        companyLabel.text = company
-        departmentLabel.text = department
-        jobTitleLabel.text = jobTitle
+        nameLabel.text = user.person.name
+        surnameLabel.text = user.person.surname
+        companyLabel.text = user.person.job.title
+        departmentLabel.text = user.person.job.department.rawValue
+        jobTitleLabel.text = user.person.job.jobTitle.rawValue
         
-        fotoImageView.image = UIImage(named: photo)
+        fotoImageView.image = UIImage(named: user.person.photo)
+        
+        navigationItem.title = user.person.fullName
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let biographyVC = segue.destination as? BiographyViewController
-        biographyVC?.biography = biography
+        biographyVC?.biography = user.person.bio
     }
 }
