@@ -10,4 +10,6 @@ If the login and password are entered correctly, a welcome screen opens, from wh
 
 <img src="https://github.com/user-attachments/assets/ca8a701c-d588-41a5-89da-0fbf64646e36" width="200">
 
-<img width="540" alt="Screenshot at Aug 01 21-16-52" src="https://github.com/user-attachments/assets/ffb24846-c67d-4d84-92ad-7397856af681">
+
+
+<img width="500" alt="Screenshot at Aug 01 21-16-52" src="https://github.com/user-attachments/assets/ffb24846-c67d-4d84-92ad-7397856af681">
